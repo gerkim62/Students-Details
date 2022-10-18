@@ -8,7 +8,7 @@ student_trs.forEach((tr, i) => {
   const name = tds[1].innerText
   const letterLink = tds[2].querySelector('a').href
   const major = tds[3].innerText
-  const id = generateId(name, 2311)
+  const id = generateId(name, 2001)
   const email = id.toLowerCase() + '@ueab.ac.ke'
   students.push({name:name,letterLink:letterLink,major:major,id:id,email:email})
 
@@ -16,6 +16,6 @@ student_trs.forEach((tr, i) => {
 })
     
 
-downloadCSV(students,'students.csv')
+downloadCSV(students,'studentswithout2311.csv')
 /*(() => { const script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = () => { eruda.init() } })();
  */
